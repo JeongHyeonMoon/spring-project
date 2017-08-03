@@ -28,7 +28,8 @@ public class FileUploadController {
 	public String upload(@RequestParam("name") String name, @RequestParam("file") MultipartFile file)
 			throws IOException {
 
-		String path = "D:/picture/";
+		//String path = "D:/picture/";
+		String path = "C:\\Users\\NAVER\\Desktop\\spring\\";
 
 		if (!file.isEmpty()) {
 			byte[] bytes = file.getBytes();

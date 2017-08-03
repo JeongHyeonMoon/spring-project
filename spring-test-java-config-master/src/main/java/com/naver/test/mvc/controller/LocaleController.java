@@ -23,6 +23,7 @@ public class LocaleController {
 
 	@RequestMapping("localeView")
 	public String localeView() {
+		// jsp message.jsp 화면을 호출함.
 		return "message";
 	}
 }

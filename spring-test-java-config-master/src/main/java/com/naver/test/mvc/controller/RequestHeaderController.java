@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class RequestHeaderController {
 	private final Logger logger = LoggerFactory.getLogger(RequestHeaderController.class);
 
+	/**
+	 * 브라우저의 정보가 찍힘
+	 * 반응형 웹을 만들때 모바일이라면 다른 화면을 보낼 수 있음
+	 * 실습하면서 쓸일은 없을 듯
+	 */
 	@RequestMapping("/header")
 	public String header(@RequestHeader(value = "Accept") String accept,
 			@RequestHeader(value = "Accept-Language") String acceptLanguage,
