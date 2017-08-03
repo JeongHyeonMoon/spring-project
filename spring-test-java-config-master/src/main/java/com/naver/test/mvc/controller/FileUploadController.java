@@ -30,6 +30,7 @@ public class FileUploadController {
 
 		//String path = "D:/picture/";
 		String path = "C:\\Users\\NAVER\\Desktop\\spring\\";
+		
 
 		if (!file.isEmpty()) {
 			byte[] bytes = file.getBytes();
@@ -41,7 +42,7 @@ public class FileUploadController {
 			logger.info("file size : {}", file.getSize());
 			logger.info("file content type : {}", file.getContentType());
 
-			return "You successfully uploaded " + name + "!";
+			return "You successfully uploaded " + name+ "파일 이름은 : "+file.getOriginalFilename() + "!";
 		} else {
 			return "You failed to upload " + name + " because the file was empty.";
 		}
